@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+{% extends "template_app/base.html" %}
+  {% block body_block %}
+    <h1>Welcome To Index</h1>
+    <h2>This Is Index.html Page Is Showing ! </h2><br>
+
+    <!-- THESE ARE PREDEFINED FILTER BY DJANGO TEMPLATES-->
+    <h1> {{ text|upper }} </h1>
+    <h1> {{ number|add:"99" }} </h1>
+
+    <!-- THIS FILTER BELOW IS MADE BY ME IN 'templatetags/my_filters'-->
+    <h1> {{ text|cut:'my name is' }} </h1>
+
+  {% endblock %}
